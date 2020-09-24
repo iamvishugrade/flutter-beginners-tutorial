@@ -1,0 +1,88 @@
+ return Scaffold(
+        body:Column(
+          children: <Widget>[
+            Image.asset(""),
+
+             Padding(
+               padding: const EdgeInsets.all(38.0),
+               child: Text("Welcome to URBus",style: TextStyle(fontSize: 60.0,fontWeight: FontWeight.bold),),
+             ),
+              Padding(
+                padding: const EdgeInsets.all(18.0),
+                child: Text('Explore new ways to travel with URBus',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 25.0),),
+              ),
+              Container(
+                child: Row(
+                  children: <Widget>[
+                    Expanded(child: Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 80.0,vertical: 20.0),
+                      child: RaisedButton(
+                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10),),
+                        color:Colors.black, onPressed: (){
+                          Navigator.push(context,MaterialPageRoute(builder: (context)=>SignIn()),);
+                          },
+                          child: Container(
+                            padding: const EdgeInsets.symmetric(vertical:16),
+                              alignment: Alignment.center,
+                              width:double.infinity,
+                              child: Text("Continue with Phone",style: TextStyle(fontWeight: FontWeight.bold,color:Colors.white,fontSize: 20),),
+
+                          ),
+                        ),
+                    ),
+                    ),
+
+
+                  ],
+                ),
+
+              ),
+            Container(
+              child: Row(
+                children: <Widget>[
+                  Expanded(child: Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 0.0,horizontal: 80),
+                    child: RaisedButton(
+                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10),),
+                      color:Colors.blue, onPressed: (){
+                      Navigator.push(context,MaterialPageRoute(builder: (context)=>SignIn()),);
+                    },
+                      child: Container(
+                        padding: const EdgeInsets.symmetric(vertical:16),
+                        alignment: Alignment.center,
+                        width:double.infinity,child:Row(
+                          children: [
+                              Text("Continue with Google ",style: TextStyle(fontWeight: FontWeight.bold,color:Colors.white,fontSize: 20),),
+
+                            SizedBox(width: 2.0,),
+                            Image.asset(""),
+                        ],
+                      ),
+
+                      ),
+                    ),
+                  ),
+                  ),
+
+
+                ],
+              ),
+
+            ),
+
+          Container(
+               child:Center(child: Padding(
+                 padding: const EdgeInsets.all(18.0),
+                 child: Text("By continuing you agree that you have read and accept our",style: TextStyle(fontSize: 12.0,color: Colors.black),),
+               ),),
+                    ),
+            Container(child:InkWell( child: Text("T&Cs and Privacy Policy",style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold),),
+              onTap: (){print("hello");},
+            ),
+            ),
+
+
+                  ],
+                ),
+
+    );
